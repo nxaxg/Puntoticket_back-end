@@ -1,0 +1,396 @@
+/***GENERAL***/
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'open_sansregular';
+    color: black;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.menu-selected{
+    text-decoration: line-through;
+    color: black;
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    max-height: 750px;
+}
+button:focus{
+    outline: none;
+}
+
+/***HEADER***/
+header{
+    background: #ff8b38;
+    width: 100%;
+    height: 85px;
+    position::; relative;
+    z-index: 3;
+    overflow: visible;
+}
+header .logo{
+    width: 50%;
+    float: left;
+    padding: 0% 2%;
+    overflow: hidden;
+}
+
+header .logo img{
+    width: 50%;
+}
+
+header .nav-menu{
+    width: 50%;
+    float: left;
+    padding: 0.5% 2%;
+    overflow: visible;
+}
+
+header .nav-menu li{
+    float: right;
+    font-size: 2em;
+    padding: 2% 0;
+}
+
+header a{
+    color: white;
+}
+
+/*burguer menu rotation*/
+#burguer-btn{
+    transition: 0.5s;
+}
+
+.burguer-menu-action{
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    color: black;
+}
+
+/*hidden burguer menu*/
+.burguer-menu{
+    width: 25%;
+    right: 0;
+    position: absolute;
+    background-color: #ff8b38;
+    top: 85px;
+    z-index: 1;
+    overflow: visible;
+    text-align: right;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+.burguer-menu li{
+    padding: 3%;
+}
+
+.burguer-menu li a{
+    font-family: 'open_sansextrabold';
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.burguer-menu li a:hover{
+    color: black;
+    transition: 0.2s;
+}
+
+.menu-divider{
+    width: 100%;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/***ASIDE***/
+
+aside{
+    width: 25%;
+    float: left;
+    background-color: dimgrey;
+    position: relative;
+    color: white;
+    padding: 1.18% 0;
+    overflow: visible;
+    z-index: 2;
+}
+
+aside .side-title{
+    width: 80%;
+    margin: 0 auto;
+    padding: 4% 0 0 0;
+    margin-bottom: 1%;
+    border-bottom: 1px solid white;
+    text-transform: uppercase;
+    font-family: 'open_sansextrabold';
+}
+
+aside .site-list, aside .admin-list, aside .config-list{
+    width: 100%;
+}
+
+aside .side-menu ul a{
+    color: white;
+}
+
+aside .site-list li, aside .admin-list li,
+aside .config-list li{
+    width: 100%;
+    overflow: hidden;
+    padding: 3% 2%;
+}
+
+aside .side-menu .left-icon{
+    width: 10%;
+    float: left;
+    font-size: 1.5em;
+}
+
+aside .aside-nav-par{
+    width: 80%;
+    float: left;
+}
+
+aside .side-menu .right-icon{
+    width: 10%;
+    float: left;
+    text-align: center;
+    font-size: 1.5em;
+    transition: 0.5s;
+}
+
+.aside-selected, .aside-option:hover{
+    background-color: darkgray;
+}
+
+#paginas-btn,#eventos-btn{
+    transition: 0.5s;
+}
+
+.eventos-menu-action, .paginas-menu-action{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotateY(180deg);
+}
+
+/*hidden burguer menu*/
+.eventos-menu{
+    width: 65%;
+    left: 100%;
+    position: absolute;
+    background-color: darkgray;
+    top: 9.25%;
+    z-index: 1;
+    overflow: visible;
+}
+
+aside .eventos-menu li, aside .paginas-menu li{
+    width: 100%;
+    padding: 4.6% 4%;
+}
+
+.eventos-menu li .left-icon, .paginas-menu li .left-icon{
+    width: 15%;
+    float: left;
+}
+
+.eventos-menu li .menu-par, .paginas-menu li .menu-par{
+    width: 85%;
+    float: left;
+}
+
+.eventos-menu li:hover, .paginas-menu li:hover{
+    background-color: dimgray;
+}
+
+.paginas-menu{
+    width: 65%;
+    left: 100%;
+    position: absolute;
+    background-color: darkgray;
+    top: 22.7%;
+    z-index: 1;
+    overflow: visible;
+}
+
+/**/
+
+/***Main***/
+.main{
+    width: 75%;
+    float: left;
+    top: -5px;
+    position: relative;
+}
+
+/*home*/
+.dashboard{
+    overflow: hidden;
+}
+
+.dashboard figure{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    bottom: -5px;
+}
+
+.dashboard figure img{
+    width: 100%;
+}
+
+.dashboard figcaption{
+    background-color: rgba(255,255,255,0.6);
+    width: 80%;
+    height: 40%;
+    bottom: 30%;
+    margin: 0 10%;
+    position: absolute;
+    font-family: 'open_sansextrabold';
+    padding: 4%;
+    text-align: center;
+}
+
+.dashboard figcaption .dash-title{
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 5px;
+    font-weight: bolder;
+}
+
+.dashboard figcaption .dash-par{
+    font-size: 1.5em;
+    font-family: 'open_sansregular';
+    padding-top: 2%;
+}
+
+/*LISTA*/
+.lista{
+    top: 0;
+    position: relative;
+}
+
+.lista-container{
+    width: 80%;
+    margin: 0 auto;
+    padding: 2% 0;
+    border: 1px solid black;
+    background-color: yellow;
+}
+
+.lista-title{
+    font-family: 'open_sansextrabold';
+    text-transform: uppercase;
+    text-align: center;
+    color: #ff8b38;
+}
+
+.filtro-title{
+    font-size: 1em;
+    font-family: 'open_sansregular'
+}
+
+.filtro-lista{
+    width: 100%;
+    padding: 3% 0;
+    overflow: hidden;
+}
+
+.filtro-btn{
+    width: 32%;
+    float: left;
+    margin-right: 2%;
+    padding: 1%;
+    background-color: white;
+    color: #ff8b38;
+    border: 1px solid #ff8b38;
+    cursor: pointer;
+    transition: 0.2s;
+    text-align: center;
+}
+
+.filtro-btn:last-child{
+    margin-right: 0;
+}
+
+.filtro-btn:hover, .filtro-sel{
+    background-color:#ff8b38;
+    color: white;
+}
+
+.listado{
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid black;
+    padding: 2% 2% 0 2%;
+}
+
+.listado .listado-info{
+    width: 80%;
+    float: left;
+}
+
+.listado .listado-admin{
+    width: 20%;
+    float: left;
+}
+
+.listado-icon{
+    margin-right: 1%;
+}
+
+.listado-info p, .listado-admin p{
+    padding: 0.5% 0;
+}
+
+.listado .listado-info .info-title{
+    padding: 0 0 0.5% 0;
+    text-transform: uppercase;
+    font-family: 'open_sansextrabold';
+}
+
+.listado .listado-btns{
+    width: 100%;
+    clear: both;
+    padding: 1% 0;
+}
+
+.listado .listado-btns button{
+    width: 33.3%;
+    float: left;
+    padding: 1% 0;
+}
+
+
+/***footer***/
+footer{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    overflow: hidden;
+    padding: 2% 0;
+    background-color: #ff8b38;
+    color: white;
+    text-align: center;
+    font-family: 'open_sanslight';
+}
