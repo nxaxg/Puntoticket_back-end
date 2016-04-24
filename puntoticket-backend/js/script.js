@@ -3,12 +3,14 @@ $(document).ready(function () {
     //JAVASCRIPT
     
     "use strict";
-
+    
     //BURGUER-MENU
     $(".burguer-menu").hide();
     $(".eventos-menu").hide();
     $(".paginas-menu").hide();
-    
+    $(".hidden-list").hide();
+    askEvento();
+    askPagina();
     
     $("#burguer-btn").click(function () {
         //rotate up burger-btn
@@ -27,6 +29,7 @@ $(document).ready(function () {
         $("#paginas-option").removeClass("aside-selected");
         //show burguer-menu
         $(".eventos-menu").slideToggle(300);
+        askPagina();
     });
     
     $("#paginas-btn").click(function () {
@@ -39,8 +42,56 @@ $(document).ready(function () {
         $("#eventos-option").removeClass("aside-selected");
         //show burguer-menu
         $(".paginas-menu").slideToggle(300);
+        askEvento();
     });
-
+    
+    function askEvento(){
+        if(window.location.pathname == "/eventos-lista.html" ||
+           window.location.pathname == "/eventos-nuevo.html" ||
+           window.location.pathname == "/eventos-editar.html"){
+            $("#eventos-option").addClass('page-selected');
+        }
+    }
+    
+    function askPagina(){
+        if(window.location.pathname == "/paginas-lista.html" ||
+           window.location.pathname == "/paginas-nuevo.html" ||
+           window.location.pathname == "/paginas-editar.html"){
+            $("#paginas-option").addClass('page-selected');
+        }
+    }
+    
+    //destacar
+    //
+    $(".destacado-btn").click(function(){
+            $(this).toggleClass('ok-destacado');
+            $(this).toggleClass('destacado-btn');
+            $(this).children(".listado-icon").toggleClass('fa-heart-o');
+            $(this).children(".listado-icon").toggleClass('fa-heart');
+            $(this).children('.destacado-txt').html("Destacado");
+        });
+    
+    $(".ok-destacado").click(function(){
+            $(this).children('.destacado-txt').html("Añadir a destacado");
+        });
+    
+    
+    //filtro-evento
+    $(".filtro-btn").click(function () {
+        $(".filtro-lista div").removeClass("filtro-sel");
+        $(this).addClass("filtro-sel");
+    });
+    
+    //ver mas btn
+    $(".ver-mas-btn").click(function (e) {
+        $(".hidden-list:hidden").slice(0, 4).fadeIn(500);
+        if ($(".hidden-list:hidden").length === 0) {
+            $(".ver-mas-btn").html("No hay más eventos");
+            $(".ver-mas-btn").addClass("pressed-btn");
+            e.preventDefault();
+        }
+    });
+    
     //CERRAR-BTN
     $("#cerrar-btn").click(function () {
         //rotate up burguer-btn
