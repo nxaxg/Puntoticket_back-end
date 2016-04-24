@@ -8,6 +8,20 @@
     padding: 0;
 }
 
+/*webkit searchbox placeholder color*/
+#search-box::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.5);
+}#search-box:-moz-placeholder {
+    /* FF 4-18 */
+    color: rgba(255,255,255,0.5);
+}#search-box::-moz-placeholder {
+    /* FF 19+ */
+    color: rgba(255,255,255,0.5);
+}#search-box:-ms-input-placeholder {
+    /* IE 10+ */
+    color: rgba(255,255,255,0.5);
+}
+
 body{
     font-family: 'open_sansregular';
     color: black;
@@ -48,7 +62,7 @@ header{
     overflow: visible;
 }
 header .logo{
-    width: 50%;
+    width: 60%;
     float: left;
     padding: 0% 2%;
     overflow: hidden;
@@ -58,21 +72,54 @@ header .logo img{
     width: 50%;
 }
 
-header .nav-menu{
-    width: 50%;
+header .search{
+    width: 25%;
     float: left;
-    padding: 0.5% 2%;
+    padding: 1.7% 0 1.7% 4%;
+}
+
+header .search #search-box{
+    background-color: rgba(255,255,255,0.1);
+    outline: none;
+    border: 0;
+    padding: 10px 5px;
+    width: 100%;
+    color: rgba(255,255,255,0.6);
+    font-size: 1em;
+}
+
+header .search #search-box:focus{
+    outline: 1px solid white;
+    color: white;
+}
+
+header .nav-menu{
+    width: 15%;
+    float: left;
+    padding: 1% 2%;
     overflow: visible;
 }
 
 header .nav-menu li{
-    float: right;
+    width: 50%;
+    float: left;
+    text-align: left;
     font-size: 2em;
     padding: 2% 0;
 }
 
+header .nav-menu li:last-child{
+    text-align: right;
+}
+
+
 header a{
     color: white;
+}
+
+header a:hover{
+    color: black;
+    transition: 0.5s;
 }
 
 /*burguer menu rotation*/
@@ -245,7 +292,7 @@ aside .eventos-menu li, aside .paginas-menu li{
 .main{
     width: 75%;
     float: left;
-    top: -5px;
+    top: 0;
     position: relative;
 }
 
@@ -298,6 +345,12 @@ aside .eventos-menu li, aside .paginas-menu li{
 
 .lista-container{
     width: 80%;
+    margin: 0 auto;
+    padding: 2% 0;
+}
+
+.edit-container{
+    width: 90%;
     margin: 0 auto;
     padding: 2% 0;
 }
@@ -439,6 +492,241 @@ aside .eventos-menu li, aside .paginas-menu li{
 .ver-mas-lista .pressed-btn{
     cursor: not-allowed;
 }
+
+/*nuevo evento*/
+
+.form-nuevo{
+    overflow: hidden;
+    background-color: #e8e8e8;
+    padding: 2% 4%;
+    border: 2px solid black;
+    font-family: 'open_sanslight';
+    color: black;
+}
+
+.form-nuevo .input-50 input{
+    border: 1px solid black;
+    margin: 2% 0;
+    padding: 1%;
+    text-transform: uppercase;
+    background-color: rgba(0,0,0,0);
+}
+
+.form-nuevo .input-container input{
+    padding: 1%;
+    text-transform: uppercase;
+    background-color: rgba(0,0,0,0);
+    border: 0;
+    font-size: 0.9em;
+}
+
+#edit-title{
+    font-size: 1.2em;
+}
+
+input:focus{
+    outline: 0;
+}
+
+.input-container{
+    border: 1px solid black;
+    margin: 2% 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-nuevo .input-100{
+    width: 100%;
+}
+
+.form-nuevo label{
+    font-family: inherit;
+    text-transform: uppercase;
+}
+
+.input-50{
+    width: 49%;
+    float: left;
+    overflow: hidden;
+    margin-right: 2%;
+}
+
+.input-full{
+    width: 100%;
+    overflow: hidden;
+}
+
+.input-full .input-icon{
+    width: 4%;
+    float: left;
+    padding: 1%;
+}
+
+.input-full input{
+    width: 96%;
+    float: left;
+}
+
+.input-50:nth-child(odd){
+    margin-right: 0;
+}
+
+.input-50 .input-icon{
+    font-size: 1em;
+    color: black;
+    padding: 2.8% 2%;
+    width: 8%;
+    float: left;
+}
+
+.input-50-full{
+    width: 92%;
+    float: left;
+}
+
+#incluir-destacados{
+    padding: 1% 0;
+    text-transform: uppercase;
+}
+
+#incluir-destacados span{
+    font-size: 1.2em;
+}
+
+.incluir-destacados-no{
+    background-color: rgba(0,0,0,0);
+}
+
+.incluir-destacados-ok{
+    background-color: dimgray;
+    border: 1px solid dimgray;
+    color: white;
+}
+
+.incluir-destacados-ok span{
+    color: red;
+}
+
+#input-cat,#input-cargo{
+    padding: 1%;
+    background-color: rgba(0,0,0,0);
+    text-transform: uppercase;
+}
+
+#input-cargo{
+    margin: 7% 0;
+}
+
+#evento-resena{
+    width: 100%;
+    height: 100px;
+    resize: none;
+    background-color: rgba(0,0,0,0);
+    border: 0;
+    margin: 0;
+    padding: 1%;
+    font-family: 'open_sanslight';
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+#evento-resena:focus{
+    outline: 0;
+    text-transform: none;
+}
+
+.img-input{
+    width: 60%;
+    margin: 2% auto;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 15% 0;
+    cursor: pointer;
+}
+
+.img-input span{
+    font-size: 1.5em;
+}
+
+.img-input-upload{
+    background-color: dimgray;
+    color: white;
+    border: 1px solid dimgray;
+}
+
+.form-divider{
+    width: 100%;
+    border: 2px dashed dimgrey;
+}
+
+.subtitle-form{
+    text-transform: uppercase;
+    padding: 1.5% 0;
+    text-align: center;
+    font-family: 'open_sansextrabold';
+    font-size: 1.5em;
+}
+
+.ticket{
+    overflow: hidden;
+}
+
+.ticket .input-icon:nth-child(odd){
+    text-align: right;
+}
+
+.add-ticket{
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.admin-btns{
+    width: 100%;
+    overflow: hidden;
+    padding: 4% 0 2% 0;
+}
+
+.admin-btns button{
+    width: 33.335%;
+    float: left;
+    padding: 1%;
+    font-family: 'open_sansextrabold';
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: white;
+}
+
+.admin-btns .vista-previa{
+    background-color: #ff8b38;
+    border: 1px solid #ff8b38;
+}
+
+.admin-btns .vista-previa:hover{
+    color: #ff8b38;
+}
+
+.admin-btns .descartar{
+    background-color: #ff2727;
+    border: 1px solid #ff2727;
+}
+
+.admin-btns .descartar:hover{
+    color: #ff2727;
+}
+
+.admin-btns .publicar{
+    background-color: #17a817;
+    border: 1px solid #17a817;
+}
+
+.admin-btns .publicar:hover{
+    color: #17a817;
+}
+
+.admin-btns button:hover{
+    background-color: rgba(0,0,0,0);
+}
+
 
 /***footer***/
 footer{

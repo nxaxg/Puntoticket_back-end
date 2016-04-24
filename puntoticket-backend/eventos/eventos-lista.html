@@ -3,42 +3,44 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Puntoticket | Backend</title>
+    <title>Puntoticket | Eventos</title>
     <!--site stylesheet-->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <!--fonts-->
-    <link rel="stylesheet" href="fonts/OpenSans/stylesheet.css">
+    <link rel="stylesheet" href="../fonts/OpenSans/stylesheet.css">
     <!--Font awesome-->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
     <!--JQuery-->
-    <script src="js/jquery-1.11.3.js"></script>
-    <script src="js/script.js"></script>
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script src="../js/script.js"></script>
     <!--icon-->
-    <link rel="shortcut icon" type="image/x-icon" href="img/web-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/web-icon.png">
 </head>
 
 <body>
     <header>
         <figure class="logo">
-            <a href="index.html"><img src="img/logo-puntoticket.png" alt="Logo puntoticket"></a>
+            <a href="../index.html"><img src="../img/logo-puntoticket.png" alt="Logo puntoticket"></a>
         </figure>
         <nav>
+           <div class="search">
+                <input type="text" placeholder="Buscar" id="search-box">
+            </div>
             <ul class="nav-menu">
-                <li>
-                    <a href="#" class="fa fa-navicon" id="burguer-btn"></a>
-                </li>
+               <li><a href="#" class="fa fa-search" id="search-btn"></a></li>
+                <li><a href="#" class="fa fa-navicon" id="burguer-btn"></a></li>
             </ul>
             <ul class="burguer-menu">
-                <li><a href="#">Sitio</a></li>
-                <li><a href="#" class="menu-selected">Dashboard</a></li>
-                <li><a href="#">Preferencias</a></li>
-                <!--categories menu-->
-                <hr class="menu-divider">
-                <li><a href="#">Administrador</a></li>
-                <li><a href="#">Cerrar sesión</a></li>
-                <hr class="menu-divider">
-                <li><a href="#" id="cerrar-btn">Cerrar</a></li>
-            </ul>
+                    <li><a href="#">Sitio</a></li>
+                    <li><a href="../index.html" class="menu-selected">Dashboard</a></li>
+                    <li><a href="#">Preferencias</a></li>
+                    <!--categories menu-->
+                    <hr class="menu-divider">
+                    <li><a href="#">Administrador</a></li>
+                    <li><a href="#">Cerrar sesión</a></li>
+                    <hr class="menu-divider">
+                    <li><a href="#" id="cerrar-btn">Cerrar</a></li>
+                </ul>
         </nav>
     </header>
 
@@ -58,7 +60,7 @@
                     </a>
                     <!--eventos-menu-->
                     <ul class="eventos-menu">
-                        <a href="#">
+                        <a href="eventos-nuevo.html">
                             <li>
                                 <span class="left-icon fa fa-plus-circle"></span>
                                 <p class="menu-par">Añadir evento</p>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Puntoticket | Nuevo Evento</title>
+    <!--site stylesheet-->
+    <link rel="stylesheet" href="../css/style.css">
+    <!--fonts-->
+    <link rel="stylesheet" href="../fonts/OpenSans/stylesheet.css">
+    <!--Font awesome-->
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <!--JQuery-->
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script src="../js/script.js"></script>
+    <!--icon-->
+    <link rel="shortcut icon" type="image/x-icon" href="../img/web-icon.png">
+</head>
+
+<body>
+    <header>
+        <figure class="logo">
+            <a href="../index.html"><img src="../img/logo-puntoticket.png" alt="Logo puntoticket"></a>
+        </figure>
+        <nav>
+            <div class="search">
+                <input type="text" placeholder="Buscar" id="search-box">
+            </div>
+            <ul class="nav-menu">
+                <li>
+                    <a href="#" class="fa fa-search" id="search-btn"></a>
+                </li>
+                <li>
+                    <a href="#" class="fa fa-navicon" id="burguer-btn"></a>
+                </li>
+            </ul>
+            <ul class="burguer-menu">
+                <li><a href="#">Sitio</a></li>
+                <li><a href="#" class="menu-selected">Dashboard</a></li>
+                <li><a href="#">Preferencias</a></li>
+                <!--categories menu-->
+                <hr class="menu-divider">
+                <li><a href="#">Administrador</a></li>
+                <li><a href="#">Cerrar sesión</a></li>
+                <hr class="menu-divider">
+                <li><a href="#" id="cerrar-btn">Cerrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--aside navbar-->
+    <div class="container">
+        <aside>
+            <div class="side-menu">
+                <!--sitio-->
+                <h3 class="side-title">Sitio</h3>
+                <ul class="site-list">
+                    <a href="#" id="eventos-btn">
+                        <li class="aside-option" id="eventos-option">
+                            <span class="left-icon fa fa-ticket"></span>
+                            <p class="aside-nav-par">Evento</p>
+                            <span id="eventos-icon" class="right-icon fa fa-angle-right"></span>
+                        </li>
+                    </a>
+                    <!--eventos-menu-->
+                    <ul class="eventos-menu">
+                        <a href="eventos-nuevo.html">
+                            <li>
+                                <span class="left-icon fa fa-plus-circle"></span>
+                                <p class="menu-par">Añadir evento</p>
+                            </li>
+                        </a>
+                        <a href="eventos-lista.html">
+                            <li>
+                                <span class="left-icon fa fa-list-alt"></span>
+                                <p class="menu-par">Listado eventos</p>
+                            </li>
+                        </a>
+                    </ul>
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-star-o"></span>
+                            <p class="aside-nav-par">Categoría</p>
+                            <span class="right-icon fa fa-angle-right"></span>
+                        </li>
+                    </a>
+                    <a href="#" id="paginas-btn">
+                        <li class="aside-option" id="paginas-option">
+                            <span class="left-icon fa fa-file-o"></span>
+                            <p class="aside-nav-par">Página</p>
+                            <span id="paginas-icon" class="right-icon fa fa-angle-right"></span>
+                        </li>
+                    </a>
+                    <!--paginas-menu-->
+                    <ul class="paginas-menu">
+                        <a href="#">
+                            <li>
+                                <span class="left-icon fa fa-plus-circle"></span>
+                                <p class="menu-par">Añadir página</p>
+                            </li>
+                        </a>
+                        <a href="#">
+                            <li>
+                                <span class="left-icon fa fa-list-alt"></span>
+                                <p class="menu-par">Listado páginas</p>
+                            </li>
+                        </a>
+                    </ul>
+                    <!---->
+                    <hr class="menu-divider">
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-wrench"></span>
+                            <p class="aside-nav-par">Tema</p>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-magic"></span>
+                            <p class="aside-nav-par">Menús</p>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-code"></span>
+                            <p class="aside-nav-par">Estilos</p>
+                        </li>
+                    </a>
+                </ul>
+                <!--administrar-->
+                <h3 class="side-title">Administrar</h3>
+                <ul class="admin-list">
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-user"></span>
+                            <p class="aside-nav-par">Usuarios</p>
+                            <span class="right-icon fa fa-angle-right"></span>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-feed"></span>
+                            <p class="aside-nav-par">Redes sociales</p>
+                            <span class="right-icon fa fa-angle-right"></span>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-bar-chart"></span>
+                            <p class="aside-nav-par">Estadísticas</p>
+                        </li>
+                    </a>
+                </ul>
+                <!--configurar-->
+                <h3 class="side-title">Configuración</h3>
+                <ul class="config-list">
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-gear"></span>
+                            <p class="aside-nav-par">Preferencias</p>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-question-circle"></span>
+                            <p class="aside-nav-par">Ayuda</p>
+                        </li>
+                    </a>
+
+                </ul>
+            </div>
+        </aside>
+
+        <section class="main nuevo-evento">
+            <div class="edit-container">
+                <h2 class="lista-title">Nuevo evento</h2>
+                <div class="form-nuevo">
+                    <div class="input-container">
+                        <input type="text" name="titulo-evento" class="input-100" placeholder="Título del evento" id="edit-title">
+                    </div>
+                    <div class="input-50">
+                        <label for="fecha-evento">
+                            <span class="fa fa-calendar-o"></span> Fecha:
+                        </label>
+                        <input type="date" name="fecha-evento" min="2016-01-01" max="2016-12-31" placeholder="Día-Mes-Año">
+                    </div>
+                    <div class="input-50">
+                        <label for="hora-evento">
+                            <span class="fa fa-clock-o"></span> Hora:
+                        </label>
+                        <input type="time" name="hora-evento">
+                    </div>
+                    <div class="input-50">
+                        <div class="input-container">
+                            <span class="input-icon fa fa-map-marker"></span> 
+                            <input class="input-50-full" type="text" name="lugar-evento" placeholder="Lugar">
+                        </div>
+                    </div>
+                    <div class="input-50">
+                        <div class="input-container">
+                            <span class="input-icon fa fa-link"></span> 
+                            <input class="input-50-full" type="text" name="link-google-maps" placeholder="Link google maps">
+                        </div>
+                    </div>
+                    <select class="input-50 input-container" name="categoria-evento" id="input-cat">
+                                <option value="#" selected>Categoría</option>
+                                <option value="#">Música</option>
+                                <option value="#">Cultura</option>
+                                <option value="#">Deportes</option>
+                                <option value="#">Misceláneos</option>
+                    </select>
+                    <button class="input-50 input-container incluir-destacados-no" id="incluir-destacados">
+                        Incluir en destacados
+                        <span class="fa fa-question"></span>
+                    </button>
+                    <div class="input-100">
+                        <div class="input-container">
+                            <textarea name="evento-reseña" id="evento-resena" placeholder="Reseña"></textarea>
+                        </div>
+                    </div>
+                    <div class="input-50">
+                        <div class="input-container img-input">
+                            <span class="fa fa-upload"></span>
+                            <span class="fa fa-camera"></span>
+                            <h3>Miniatura del evento</h3>
+                        </div>
+                    </div>
+                    <input type="file" id="upload">
+                    <div class="input-50">
+                        <div class="input-container img-input">
+                            <span class="fa fa-upload"></span>
+                            <span class="fa fa-camera"></span>
+                            <h3>Banner del evento</h3>
+                        </div>
+                    </div>
+                    <div class="input-full">
+                        <div class="input-container">
+                            <span class="input-icon fa fa-hashtag"></span>
+                            <input type="tags" id="tags-evento" placeholder="Tags">
+                        </div>
+                    </div>
+                    <hr class="form-divider">
+                    <h3 class="subtitle-form">Detalle ticket</h3>
+                    <!--ticket-->
+                    <div class="ticket">
+                        <div class="input-50">
+                            <span class="input-icon fa fa-plus-circle add-ticket"></span>
+                            <input type="text" class="input-50-full input-container" placeholder="Tipo ticket">
+                        </div>
+                        <div class="input-50">
+                            <span class="input-icon fa fa-dollar"></span>
+                            <input type="text" class="input-50-full input-container" placeholder="Tipo ticket">
+                        </div>
+                    </div>
+                    <div class="ticket">
+                        <div class="input-50">
+                            <span class="input-icon fa fa-plus-circle add-ticket"></span>
+                            <input type="text" class="input-50-full input-container" placeholder="Tipo ticket">
+                        </div>
+                        <div class="input-50">
+                            <span class="input-icon fa fa-dollar"></span>
+                            <input type="text" class="input-50-full input-container" placeholder="Tipo ticket">
+                        </div>
+                    </div>
+                    <!--hidden tickets-->
+                    <div class="ticket hidden-ticket">
+                        <div class="input-50">
+                            <span class="input-icon fa fa-plus-circle add-ticket"></span>
+                            <input type="text" class="input-50-full input-container" placeholder="Tipo ticket">
+                        </div>
+                        <div class="input-50">
+                            <span class="input-icon fa fa-dollar"></span>
+                            <input type="text" class="input-50-full input-container" placeholder="Tipo ticket">
+                        </div>
+                    </div>
+                    <div class="ticket hidden-ticket">
+                        <div class="input-50">
+                            <span class="input-icon fa fa-plus-circle add-ticket"></span>
+                            <input type="text" class="input-50-full input-container" placeholder="Tipo ticket">
+                        </div>
+                        <div class="input-50">
+                            <span class="input-icon fa fa-dollar"></span>
+                            <input type="text" class="input-50-full input-container" placeholder="Tipo ticket">
+                        </div>
+                    </div>
+                    <div class="ticket hidden-ticket">
+                        <div class="input-50">
+                            <span class="input-icon fa fa-plus-circle add-ticket"></span>
+                            <input type="text" class="input-50-full input-container" placeholder="Tipo ticket">
+                        </div>
+                        <div class="input-50">
+                            <span class="input-icon fa fa-dollar"></span>
+                            <input type="text" class="input-50-full input-container" placeholder="Tipo ticket">
+                        </div>
+                    </div>
+                    <div class="input-50">
+                        <div class="input-container img-input">
+                            <span class="fa fa-upload"></span>
+                            <span class="fa fa-camera"></span>
+                            <h3>Mapa del recinto</h3>
+                        </div>
+                    </div>
+                    <select class="input-50 input-container" name="cargo-evento" id="input-cargo">
+                                <option value="#" selected>Cargo</option>
+                                <option value="#">Normal: $2.500</option>
+                                <option value="#">Masivo: $5.000</option>
+                    </select>
+                    <div class="input-full">
+                        <div class="admin-btns">
+                            <button class="vista-previa">
+                                <span class="fa fa-tv"></span>
+                                Vista previa
+                            </button>
+                            <button class="descartar">
+                                <span class="fa fa-eraser"></span>
+                                Descartar
+                            </button>
+                            <a href="eventos-lista.html">
+                                <button class="publicar">
+                                    <span class="fa fa-check"></span>
+                                    Publicar
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy;Vertikal 2016</p>
+    </footer>
+</body>
+
+</html>

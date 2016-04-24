@@ -9,6 +9,8 @@ $(document).ready(function () {
     $(".eventos-menu").hide();
     $(".paginas-menu").hide();
     $(".hidden-list").hide();
+    $(".hidden-ticket").hide();
+    $("#upload").hide();
     askEvento();
     askPagina();
     
@@ -88,6 +90,26 @@ $(document).ready(function () {
         if ($(".hidden-list:hidden").length === 0) {
             $(".ver-mas-btn").html("No hay más eventos");
             $(".ver-mas-btn").addClass("pressed-btn");
+            e.preventDefault();
+        }
+    });
+    
+    $("#incluir-destacados").click(function(){
+       $(this).toggleClass('incluir-destacados-ok');
+       $(this).toggleClass('incluir-destacados-no');
+       $(this).children('span').toggleClass('fa-question');
+       $(this).children('span').toggleClass('fa-heart');
+    });
+    
+    $(".img-input").click(function(){
+        $("#upload").trigger('click');
+        $(this).toggleClass('img-input-upload');
+        $(this).children('span').removeClass('fa-upload');
+    });
+    
+    $(".add-ticket").click(function (e) {
+        $(".hidden-ticket:hidden").slice(0, 1).fadeIn(500);
+        if ($(".hidden-ticket:hidden").length === 0) {
             e.preventDefault();
         }
     });
