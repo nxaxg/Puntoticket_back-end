@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../fonts/OpenSans/stylesheet.css">
     <!--Font awesome-->
     <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/eliminar-modal.css">
     <!--JQuery-->
     <script src="../js/jquery-1.11.3.js"></script>
     <script src="../js/script.js"></script>
@@ -23,24 +24,28 @@
             <a href="../index.html"><img src="../img/logo-puntoticket.png" alt="Logo puntoticket"></a>
         </figure>
         <nav>
-           <div class="search">
+            <div class="search">
                 <input type="text" placeholder="Buscar" id="search-box">
             </div>
             <ul class="nav-menu">
-               <li><a href="#" class="fa fa-search" id="search-btn"></a></li>
-                <li><a href="#" class="fa fa-navicon" id="burguer-btn"></a></li>
+                <li>
+                    <a href="#" class="fa fa-search" id="search-btn"></a>
+                </li>
+                <li>
+                    <a href="#" class="fa fa-navicon" id="burguer-btn"></a>
+                </li>
             </ul>
             <ul class="burguer-menu">
-                    <li><a href="#">Sitio</a></li>
-                    <li><a href="../index.html" class="menu-selected">Dashboard</a></li>
-                    <li><a href="#">Preferencias</a></li>
-                    <!--categories menu-->
-                    <hr class="menu-divider">
-                    <li><a href="#">Administrador</a></li>
-                    <li><a href="#">Cerrar sesión</a></li>
-                    <hr class="menu-divider">
-                    <li><a href="#" id="cerrar-btn">Cerrar</a></li>
-                </ul>
+                <li><a href="#">Sitio</a></li>
+                <li><a href="../index.html" class="menu-selected">Dashboard</a></li>
+                <li><a href="#">Preferencias</a></li>
+                <!--categories menu-->
+                <hr class="menu-divider">
+                <li><a href="#">Administrador</a></li>
+                <li><a href="#">Cerrar sesión</a></li>
+                <hr class="menu-divider">
+                <li><a href="#" id="cerrar-btn">Cerrar</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -52,7 +57,7 @@
                 <h3 class="side-title">Sitio</h3>
                 <ul class="site-list">
                     <a href="#" id="eventos-btn">
-                        <li class="aside-option" id="eventos-option">
+                        <li class="aside-option page-selected" id="eventos-option">
                             <span class="left-icon fa fa-ticket"></span>
                             <p class="aside-nav-par">Evento</p>
                             <span id="eventos-icon" class="right-icon fa fa-angle-right"></span>
@@ -177,17 +182,17 @@
                     <!--filtro-fecha-->
                     <div class="filtro-btn filtro-sel">
                         <span class="filtro-icon fa fa-calendar-o"></span>
-                        <p class="filtro-title">Fecha</p>
+                        <p class="filtro-title">Ordenar por fecha</p>
                     </div>
                     <!--filtro-AZ-->
                     <div class="filtro-btn">
-                        <span class="filtro-icon fa fa-calendar-o"></span>
-                        <p class="filtro-title">A-Z</p>
+                        <span class="filtro-icon fa fa-sort-alpha-asc"></span>
+                        <p class="filtro-title">Orden alfabético</p>
                     </div>
                     <!--filtro-categorias-->
                     <div class="filtro-btn">
                         <span class="filtro-icon fa fa-star"></span>
-                        <p class="filtro-title">Categorías</p>
+                        <p class="filtro-title">Ordenar por categorías</p>
                     </div>
                 </div>
                 <!--evento1-->
@@ -196,31 +201,25 @@
                     <div class="listado-info">
                         <h3 class="info-title">The Dillinger Escape Plan</h3>
                         <p class="info-lugar">
-                            <span class="listado-icon fa fa-map-marker"></span>
-                            Teatro Cariola
+                            <span class="listado-icon fa fa-map-marker"></span> Teatro Cariola
                         </p>
                         <p class="info-fecha">
-                            <span class="listado-icon fa fa-calendar-o"></span>
-                            25-Marzo-2016
+                            <span class="listado-icon fa fa-calendar-o"></span> 25-Marzo-2016
                         </p>
                         <p class="info-hora">
-                            <span class="listado-icon fa fa-clock-o"></span>
-                            20:30hrs.
+                            <span class="listado-icon fa fa-clock-o"></span> 20:30hrs.
                         </p>
                     </div>
                     <!--info-admin-->
                     <div class="listado-admin">
                         <p class="admin-fecha">
-                            <span class="listado-icon fa fa-calendar-o"></span>
-                            21-04-2016
+                            <span class="listado-icon fa fa-calendar-o"></span> 21-04-2016
                         </p>
                         <p class="admin-hora">
-                            <span class="listado-icon fa fa-clock-o"></span>
-                            18:30
+                            <span class="listado-icon fa fa-clock-o"></span> 18:30
                         </p>
                         <p class="admin-categoria">
-                            <span class="listado-icon fa fa-star-o"></span>
-                            Música
+                            <span class="listado-icon fa fa-star-o"></span> Música
                         </p>
                     </div>
                     <div class="listado-btns">
@@ -230,14 +229,14 @@
                             <span class="destacado-txt">Añadir a destacados</span>
                         </button>
                         <!--editar-->
-                        <button class="admin-btn">
-                            <span class="listado-icon fa fa-edit"></span>
-                            Editar
-                        </button>
+                        <a href="eventos-editar.html">
+                            <button class="admin-btn">
+                                <span class="listado-icon fa fa-edit"></span> Editar
+                            </button>
+                        </a>
                         <!--eliminar-->
-                        <button class="admin-btn">
-                            <span class="listado-icon fa fa-trash-o"></span>
-                            Eliminar
+                        <button class="admin-btn eliminar">
+                            <span class="listado-icon fa fa-trash-o"></span> Eliminar
                         </button>
                     </div>
                 </div>
@@ -247,31 +246,25 @@
                     <div class="listado-info">
                         <h3 class="info-title">Swans</h3>
                         <p class="info-lugar">
-                            <span class="listado-icon fa fa-map-marker"></span>
-                            Teatro Caupolicán
+                            <span class="listado-icon fa fa-map-marker"></span> Teatro Caupolicán
                         </p>
                         <p class="info-fecha">
-                            <span class="listado-icon fa fa-calendar-o"></span>
-                            31-Agosto-2016
+                            <span class="listado-icon fa fa-calendar-o"></span> 31-Agosto-2016
                         </p>
                         <p class="info-hora">
-                            <span class="listado-icon fa fa-clock-o"></span>
-                            20:30hrs.
+                            <span class="listado-icon fa fa-clock-o"></span> 20:30hrs.
                         </p>
                     </div>
                     <!--info-admin-->
                     <div class="listado-admin">
                         <p class="admin-fecha">
-                            <span class="listado-icon fa fa-calendar-o"></span>
-                            22-Abril-2016
+                            <span class="listado-icon fa fa-calendar-o"></span> 22-Abril-2016
                         </p>
                         <p class="admin-hora">
-                            <span class="listado-icon fa fa-clock-o"></span>
-                            10:30
+                            <span class="listado-icon fa fa-clock-o"></span> 10:30
                         </p>
                         <p class="admin-categoria">
-                            <span class="listado-icon fa fa-star-o"></span>
-                            Música
+                            <span class="listado-icon fa fa-star-o"></span> Música
                         </p>
                     </div>
                     <div class="listado-btns">
@@ -281,14 +274,14 @@
                             <span class="destacado-txt">Destacado</span>
                         </button>
                         <!--editar-->
-                        <button class="admin-btn">
-                            <span class="listado-icon fa fa-edit"></span>
-                            Editar
-                        </button>
+                        <a href="eventos-editar.html">
+                            <button class="admin-btn">
+                                <span class="listado-icon fa fa-edit"></span> Editar
+                            </button>
+                        </a>
                         <!--eliminar-->
-                        <button class="admin-btn">
-                            <span class="listado-icon fa fa-trash-o"></span>
-                            Eliminar
+                        <button class="admin-btn eliminar">
+                            <span class="listado-icon fa fa-trash-o"></span> Eliminar
                         </button>
                     </div>
                 </div>
@@ -298,31 +291,25 @@
                     <div class="listado-info">
                         <h3 class="info-title">Felipe Avello y el mono Bubbles</h3>
                         <p class="info-lugar">
-                            <span class="listado-icon fa fa-map-marker"></span>
-                            Teatro Nescafé de las Artes
+                            <span class="listado-icon fa fa-map-marker"></span> Teatro Nescafé de las Artes
                         </p>
                         <p class="info-fecha">
-                            <span class="listado-icon fa fa-calendar-o"></span>
-                            25-Septiembre-2016
+                            <span class="listado-icon fa fa-calendar-o"></span> 25-Septiembre-2016
                         </p>
                         <p class="info-hora">
-                            <span class="listado-icon fa fa-clock-o"></span>
-                            22:30hrs.
+                            <span class="listado-icon fa fa-clock-o"></span> 22:30hrs.
                         </p>
                     </div>
                     <!--info-admin-->
                     <div class="listado-admin">
                         <p class="admin-fecha">
-                            <span class="listado-icon fa fa-calendar-o"></span>
-                            21-04-2016
+                            <span class="listado-icon fa fa-calendar-o"></span> 21-04-2016
                         </p>
                         <p class="admin-hora">
-                            <span class="listado-icon fa fa-clock-o"></span>
-                            18:30
+                            <span class="listado-icon fa fa-clock-o"></span> 18:30
                         </p>
                         <p class="admin-categoria">
-                            <span class="listado-icon fa fa-star-o"></span>
-                            Teatro
+                            <span class="listado-icon fa fa-star-o"></span> Teatro
                         </p>
                     </div>
                     <!--botones-->
@@ -333,14 +320,14 @@
                             <span class="destacado-txt">Añadir a destacados</span>
                         </button>
                         <!--editar-->
-                        <button class="admin-btn">
-                            <span class="listado-icon fa fa-edit"></span>
-                            Editar
-                        </button>
+                        <a href="eventos-editar.html">
+                            <button class="admin-btn">
+                                <span class="listado-icon fa fa-edit"></span> Editar
+                            </button>
+                        </a>
                         <!--eliminar-->
-                        <button class="admin-btn">
-                            <span class="listado-icon fa fa-trash-o"></span>
-                            Eliminar
+                        <button class="admin-btn eliminar">
+                            <span class="listado-icon fa fa-trash-o"></span> Eliminar
                         </button>
                     </div>
                 </div>
@@ -350,31 +337,25 @@
                     <div class="listado-info">
                         <h3 class="info-title">Lota Schwagger vs. FC Bayern Munchen</h3>
                         <p class="info-lugar">
-                            <span class="listado-icon fa fa-map-marker"></span>
-                            Estadio Nacional
+                            <span class="listado-icon fa fa-map-marker"></span> Estadio Nacional
                         </p>
                         <p class="info-fecha">
-                            <span class="listado-icon fa fa-calendar-o"></span>
-                            31-Mayo-2016
+                            <span class="listado-icon fa fa-calendar-o"></span> 31-Mayo-2016
                         </p>
                         <p class="info-hora">
-                            <span class="listado-icon fa fa-clock-o"></span>
-                            12:30hrs.
+                            <span class="listado-icon fa fa-clock-o"></span> 12:30hrs.
                         </p>
                     </div>
                     <!--info-admin-->
                     <div class="listado-admin">
                         <p class="admin-fecha">
-                            <span class="listado-icon fa fa-calendar-o"></span>
-                            21-Junio-2016
+                            <span class="listado-icon fa fa-calendar-o"></span> 21-Junio-2016
                         </p>
                         <p class="admin-hora">
-                            <span class="listado-icon fa fa-clock-o"></span>
-                            18:30
+                            <span class="listado-icon fa fa-clock-o"></span> 18:30
                         </p>
                         <p class="admin-categoria">
-                            <span class="listado-icon fa fa-star-o"></span>
-                            Deportes
+                            <span class="listado-icon fa fa-star-o"></span> Deportes
                         </p>
                     </div>
                     <div class="listado-btns">
@@ -384,11 +365,13 @@
                             <span class="destacado-txt">Destacado</span>
                         </button>
                         <!--editar-->
-                        <button class="admin-btn">
-                            <span class="listado-icon fa fa-edit"></span> Editar
-                        </button>
+                        <a href="eventos-editar.html">
+                            <button class="admin-btn">
+                                <span class="listado-icon fa fa-edit"></span> Editar
+                            </button>
+                        </a>
                         <!--eliminar-->
-                        <button class="admin-btn">
+                        <button class="admin-btn eliminar">
                             <span class="listado-icon fa fa-trash-o"></span> Eliminar
                         </button>
                     </div>
@@ -401,31 +384,25 @@
                     <div class="listado-info">
                         <h3 class="info-title">Deafheaven</h3>
                         <p class="info-lugar">
-                            <span class="listado-icon fa fa-map-marker"></span>
-                            Club Blondie
+                            <span class="listado-icon fa fa-map-marker"></span> Club Blondie
                         </p>
                         <p class="info-fecha">
-                            <span class="listado-icon fa fa-calendar-o"></span>
-                            10-Diciembre-2016
+                            <span class="listado-icon fa fa-calendar-o"></span> 10-Diciembre-2016
                         </p>
                         <p class="info-hora">
-                            <span class="listado-icon fa fa-clock-o"></span>
-                            20:30hrs.
+                            <span class="listado-icon fa fa-clock-o"></span> 20:30hrs.
                         </p>
                     </div>
                     <!--info-admin-->
                     <div class="listado-admin">
                         <p class="admin-fecha">
-                            <span class="listado-icon fa fa-calendar-o"></span>
-                            21-04-2016
+                            <span class="listado-icon fa fa-calendar-o"></span> 21-04-2016
                         </p>
                         <p class="admin-hora">
-                            <span class="listado-icon fa fa-clock-o"></span>
-                            18:30
+                            <span class="listado-icon fa fa-clock-o"></span> 18:30
                         </p>
                         <p class="admin-categoria">
-                            <span class="listado-icon fa fa-star-o"></span>
-                            Música
+                            <span class="listado-icon fa fa-star-o"></span> Música
                         </p>
                     </div>
                     <div class="listado-btns">
@@ -435,14 +412,14 @@
                             <span class="destacado-txt">Destacado</span>
                         </button>
                         <!--editar-->
-                        <button class="admin-btn">
-                            <span class="listado-icon fa fa-edit"></span>
-                            Editar
-                        </button>
+                        <a href="eventos-editar.html">
+                            <button class="admin-btn">
+                                <span class="listado-icon fa fa-edit"></span> Editar
+                            </button>
+                        </a>
                         <!--eliminar-->
-                        <button class="admin-btn">
-                            <span class="listado-icon fa fa-trash-o"></span>
-                            Eliminar
+                        <button class="admin-btn eliminar">
+                            <span class="listado-icon fa fa-trash-o"></span> Eliminar
                         </button>
                     </div>
                 </div>
@@ -452,31 +429,25 @@
                     <div class="listado-info">
                         <h3 class="info-title">Napalm Death</h3>
                         <p class="info-lugar">
-                            <span class="listado-icon fa fa-map-marker"></span>
-                            Teatro Cariola
+                            <span class="listado-icon fa fa-map-marker"></span> Teatro Cariola
                         </p>
                         <p class="info-fecha">
-                            <span class="listado-icon fa fa-calendar-o"></span>
-                            10-Agosto-2016
+                            <span class="listado-icon fa fa-calendar-o"></span> 10-Agosto-2016
                         </p>
                         <p class="info-hora">
-                            <span class="listado-icon fa fa-clock-o"></span>
-                            20:00hrs.
+                            <span class="listado-icon fa fa-clock-o"></span> 20:00hrs.
                         </p>
                     </div>
                     <!--info-admin-->
                     <div class="listado-admin">
                         <p class="admin-fecha">
-                            <span class="listado-icon fa fa-calendar-o"></span>
-                            21-04-2016
+                            <span class="listado-icon fa fa-calendar-o"></span> 21-04-2016
                         </p>
                         <p class="admin-hora">
-                            <span class="listado-icon fa fa-clock-o"></span>
-                            18:30
+                            <span class="listado-icon fa fa-clock-o"></span> 18:30
                         </p>
                         <p class="admin-categoria">
-                            <span class="listado-icon fa fa-star-o"></span>
-                            Música
+                            <span class="listado-icon fa fa-star-o"></span> Música
                         </p>
                     </div>
                     <div class="listado-btns">
@@ -486,14 +457,14 @@
                             <span class="destacado-txt">Añadir a destacado</span>
                         </button>
                         <!--editar-->
-                        <button class="admin-btn">
-                            <span class="listado-icon fa fa-edit"></span>
-                            Editar
-                        </button>
+                        <a href="eventos-editar.html">
+                            <button class="admin-btn">
+                                <span class="listado-icon fa fa-edit"></span> Editar
+                            </button>
+                        </a>
                         <!--eliminar-->
-                        <button class="admin-btn">
-                            <span class="listado-icon fa fa-trash-o"></span>
-                            Eliminar
+                        <button class="admin-btn eliminar">
+                            <span class="listado-icon fa fa-trash-o"></span> Eliminar
                         </button>
                     </div>
                 </div>
@@ -503,31 +474,25 @@
                     <div class="listado-info">
                         <h3 class="info-title">Sasha Gray</h3>
                         <p class="info-lugar">
-                            <span class="listado-icon fa fa-map-marker"></span>
-                            Club Subterráneo
+                            <span class="listado-icon fa fa-map-marker"></span> Club Subterráneo
                         </p>
                         <p class="info-fecha">
-                            <span class="listado-icon fa fa-calendar-o"></span>
-                            30-Julio-2016
+                            <span class="listado-icon fa fa-calendar-o"></span> 30-Julio-2016
                         </p>
                         <p class="info-hora">
-                            <span class="listado-icon fa fa-clock-o"></span>
-                            23:00hrs.
+                            <span class="listado-icon fa fa-clock-o"></span> 23:00hrs.
                         </p>
                     </div>
                     <!--info-admin-->
                     <div class="listado-admin">
                         <p class="admin-fecha">
-                            <span class="listado-icon fa fa-calendar-o"></span>
-                            21-04-2016
+                            <span class="listado-icon fa fa-calendar-o"></span> 21-04-2016
                         </p>
                         <p class="admin-hora">
-                            <span class="listado-icon fa fa-clock-o"></span>
-                            18:30
+                            <span class="listado-icon fa fa-clock-o"></span> 18:30
                         </p>
                         <p class="admin-categoria">
-                            <span class="listado-icon fa fa-star-o"></span>
-                            Música
+                            <span class="listado-icon fa fa-star-o"></span> Música
                         </p>
                     </div>
                     <div class="listado-btns">
@@ -537,14 +502,14 @@
                             <span class="destacado-txt">Destacado</span>
                         </button>
                         <!--editar-->
-                        <button class="admin-btn">
-                            <span class="listado-icon fa fa-edit"></span>
-                            Editar
-                        </button>
+                        <a href="eventos-editar.html">
+                            <button class="admin-btn">
+                                <span class="listado-icon fa fa-edit"></span> Editar
+                            </button>
+                        </a>
                         <!--eliminar-->
-                        <button class="admin-btn">
-                            <span class="listado-icon fa fa-trash-o"></span>
-                            Eliminar
+                        <button class="admin-btn eliminar">
+                            <span class="listado-icon fa fa-trash-o"></span> Eliminar
                         </button>
                     </div>
                 </div>
@@ -556,6 +521,17 @@
             </div>
         </section>
     </div>
+
+    <div id="eliminar-modal">
+        <h2 class="modal-title">Confirmar Eliminar</h2>
+        <i id="modal-icon" class="fa fa-close modal-close"></i>
+        <p>¿Seguro/a que desea eliminar el evento <span id="evento-eliminar"></strong></p>
+        <ul class="modal-btns">
+            <li class="modal-si"><span class="fa fa-trash-o"></span>Eliminar</li>
+            <li class="modal-no modal-close"><span class="fa fa-close"></span>Cancelar</li>
+            </ul>
+    </div>
+
 
     <footer>
         <p>&copy;Vertikal 2016</p>

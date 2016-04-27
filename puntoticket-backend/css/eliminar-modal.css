@@ -1,0 +1,91 @@
+/*ELIMINAR MODAL*/
+
+#eliminar-modal{
+    width: 40%;
+    height: auto;
+    left: 0;
+    margin: 0 30%;
+    position: absolute;
+    top: 40%;
+    background-color: white;
+    border: 1px solid #ff8b38;
+    z-index: auto;
+    overflow: hidden;
+}
+
+#eliminar-modal .modal-title{
+    padding: 0;
+    margin: 0;
+    width: 95%;
+    float: left;
+    background-color: #ff8b38;
+    padding: 10px 6px;
+    font-size: 1.2em;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#eliminar-modal>#modal-icon{
+    width: 5%;
+    float: left;
+    background-color: #ff8b38;
+    padding: 15px 0;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+#eliminar-modal p{
+    padding: 10px 5px;
+    text-align: center;
+}
+
+#eliminar-modal .modal-btns{
+    width: 60%;
+    float: left;
+    margin: 0 20%;
+    overflow: hidden;
+    padding: 2% 0;
+}
+
+#eliminar-modal li{
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+    padding: 1% 0;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#eliminar-modal li:last-child{
+    margin-right: 0;
+}
+
+#eliminar-modal .modal-btns span{
+    padding-right: 5px;
+}
+
+#eliminar-modal .modal-si{
+    background-color: #ff8b38;
+    border: 1px solid #ff8b38;
+}
+
+#eliminar-modal .modal-si:hover{
+    background-color: white;
+    color: #ff8b38;
+}
+
+#eliminar-modal .modal-no{
+    background-color: dimgray;
+    border: 1px solid dimgray;
+}
+
+#eliminar-modal .modal-no:hover{
+    background-color: white;
+    color: dimgray;
+}

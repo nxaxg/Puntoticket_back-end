@@ -44,6 +44,7 @@ a{
     margin: 0 auto;
     overflow: hidden;
     position: relative;
+    top: 0;
 }
 button:focus{
     outline: none;
@@ -51,31 +52,34 @@ button:focus{
 button{
     cursor: pointer;
 }
+button:hover{
+    transition: 0.3s;
+}
 
 /***HEADER***/
 header{
     background: #ff8b38;
     width: 100%;
-    height: 85px;
-    position::; relative;
+    height: 90px;
+    position: relative;
     z-index: 3;
     overflow: visible;
 }
 header .logo{
-    width: 60%;
+    width: 65%;
     float: left;
-    padding: 0% 2%;
+    padding: 0 2%;
     overflow: hidden;
 }
 
 header .logo img{
-    width: 50%;
+    width: 400px;
 }
 
 header .search{
     width: 25%;
     float: left;
-    padding: 1.7% 0 1.7% 4%;
+    padding: 30px 0 20px 4%;
 }
 
 header .search #search-box{
@@ -94,9 +98,9 @@ header .search #search-box:focus{
 }
 
 header .nav-menu{
-    width: 15%;
+    width: 10%;
     float: left;
-    padding: 1% 2%;
+    padding: 22px 2% 0 1%;
     overflow: visible;
 }
 
@@ -142,9 +146,8 @@ header a:hover{
     right: 0;
     position: absolute;
     background-color: #ff8b38;
-    top: 85px;
+    top: 100%;
     z-index: 1;
-    overflow: visible;
     text-align: right;
     border: 1px solid rgba(255,255,255,0.3);
 }
@@ -299,13 +302,15 @@ aside .eventos-menu li, aside .paginas-menu li{
 /*home*/
 .dashboard{
     overflow: hidden;
+    bottom: 0;
 }
 
 .dashboard figure{
     width: 100%;
     position: relative;
     overflow: hidden;
-    bottom: -5px;
+    top: 0;
+    margin-bottom: -5px;
 }
 
 .dashboard figure img{
@@ -313,27 +318,27 @@ aside .eventos-menu li, aside .paginas-menu li{
 }
 
 .dashboard figcaption{
-    background-color: rgba(255,255,255,0.6);
-    width: 80%;
-    height: 40%;
-    bottom: 30%;
-    margin: 0 10%;
+    background-color: rgba(105, 105, 105, 0.8);
+    width: 100%;
+    height: auto;
+    bottom: 40%;
     position: absolute;
     font-family: 'open_sansextrabold';
     padding: 4%;
     text-align: center;
+    color: white;
 }
 
 .dashboard figcaption .dash-title{
     text-transform: uppercase;
     font-size: 2em;
-    letter-spacing: 5px;
+    letter-spacing: 10px;
     font-weight: bolder;
 }
 
 .dashboard figcaption .dash-par{
     font-size: 1.5em;
-    font-family: 'open_sansregular';
+    font-family: 'open_sanslight';
     padding-top: 2%;
 }
 
@@ -361,6 +366,7 @@ aside .eventos-menu li, aside .paginas-menu li{
     text-align: center;
     color: #ff8b38;
     font-size: 2em;
+    padding: 1% 0;
 }
 
 .filtro-title{
@@ -446,7 +452,7 @@ aside .eventos-menu li, aside .paginas-menu li{
     transition: 0.3s;
 }
 
-.listado .listado-btns button:last-child{
+.listado .listado-btns>button:last-child{
     margin-right: 0;
 }
 
@@ -498,8 +504,7 @@ aside .eventos-menu li, aside .paginas-menu li{
 .form-nuevo{
     overflow: hidden;
     background-color: #e8e8e8;
-    padding: 2% 4%;
-    border: 2px solid black;
+    padding: 1% 4%;
     font-family: 'open_sanslight';
     color: black;
 }
@@ -533,6 +538,12 @@ input:focus{
     margin: 2% 0;
     width: 100%;
     overflow: hidden;
+}
+
+.input-container h1{
+    padding: 1%;
+    font-size: 1.2em;
+    text-transform: uppercase;
 }
 
 .form-nuevo .input-100{
@@ -687,13 +698,14 @@ input:focus{
 }
 
 .admin-btns button{
-    width: 33.335%;
+    width: 32%;
     float: left;
     padding: 1%;
     font-family: 'open_sansextrabold';
     font-size: 1.2em;
     text-transform: uppercase;
     color: white;
+    margin-right: 2%;
 }
 
 .admin-btns .vista-previa{
@@ -717,6 +729,7 @@ input:focus{
 .admin-btns .publicar{
     background-color: #17a817;
     border: 1px solid #17a817;
+    margin-right: 0;
 }
 
 .admin-btns .publicar:hover{
@@ -726,7 +739,6 @@ input:focus{
 .admin-btns button:hover{
     background-color: rgba(0,0,0,0);
 }
-
 
 /***footer***/
 footer{

@@ -11,8 +11,7 @@ $(document).ready(function () {
     $(".hidden-list").hide();
     $(".hidden-ticket").hide();
     $("#upload").hide();
-    askEvento();
-    askPagina();
+    $("#eliminar-modal").hide();
     
     $("#burguer-btn").click(function () {
         //rotate up burger-btn
@@ -47,21 +46,7 @@ $(document).ready(function () {
         askEvento();
     });
     
-    function askEvento(){
-        if(window.location.pathname == "/eventos-lista.html" ||
-           window.location.pathname == "/eventos-nuevo.html" ||
-           window.location.pathname == "/eventos-editar.html"){
-            $("#eventos-option").addClass('page-selected');
-        }
-    }
     
-    function askPagina(){
-        if(window.location.pathname == "/paginas-lista.html" ||
-           window.location.pathname == "/paginas-nuevo.html" ||
-           window.location.pathname == "/paginas-editar.html"){
-            $("#paginas-option").addClass('page-selected');
-        }
-    }
     
     //destacar
     //
@@ -112,6 +97,25 @@ $(document).ready(function () {
         if ($(".hidden-ticket:hidden").length === 0) {
             e.preventDefault();
         }
+    });
+        
+    $(".eliminar").click(function(){
+        //título evento a eliminar
+        var message = $(this).parent().siblings().find('.info-title').html();
+        document.getElementById('evento-eliminar').innerHTML = "<strong>" + message + "</strong>?";
+        //ventana modal eliminar
+       $("#eliminar-modal").fadeIn(200);
+       $(".container").css('opacity','0.2');
+        var variable = $(this).parent().parent();
+        $(".modal-si").click(function(){
+           $("#eliminar-modal").fadeOut(100);
+            $(".container").css('opacity','1');
+            variable.fadeOut(500);
+        });
+        $(".modal-close").click(function(){
+           $("#eliminar-modal").fadeOut(100);
+            $(".container").css('opacity','1');
+        });
     });
     
     //CERRAR-BTN
