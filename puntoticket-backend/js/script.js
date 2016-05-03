@@ -90,6 +90,7 @@ $(document).ready(function () {
         $("#upload").trigger('click');
         $(this).toggleClass('img-input-upload');
         $(this).children('span').removeClass('fa-upload');
+        $(this).children('span').toggleClass('fa-check');
     });
     
     $(".add-ticket").click(function (e) {
@@ -116,6 +117,26 @@ $(document).ready(function () {
            $("#eliminar-modal").fadeOut(100);
             $(".container").css('opacity','1');
         });
+    });
+    
+    //titulo a editar
+    $(".editar-click").click(function(){
+        var titulo = $(this).parent().siblings().find('.info-title').html();
+        document.location.href = 'eventos-editar.html';
+        document.getElementById('titulo-editar').innerHTML = titulo;
+    });
+    
+    //pagina-edit
+    $(".pagina-edit-sel").click(function(){
+        $(this).toggleClass('pagina-edit-selected');
+    });
+    
+    $(".publicado-btn").click(function(){
+            $(this).toggleClass('ok-destacado');
+            $(this).toggleClass('publicado-btn');
+            $(this).children(".listado-icon").toggleClass('fa-upload');
+            $(this).children(".listado-icon").toggleClass('fa-thumbs-up');
+            $(this).children('.publicado-txt').html("Publicado");
     });
     
     //CERRAR-BTN

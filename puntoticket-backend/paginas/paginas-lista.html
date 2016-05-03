@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Puntoticket | Páginas</title>
+    <!--site stylesheet-->
+    <link rel="stylesheet" href="../css/style.css">
+    <!--fonts-->
+    <link rel="stylesheet" href="../fonts/OpenSans/stylesheet.css">
+    <!--Font awesome-->
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/eliminar-modal.css">
+    <!--JQuery-->
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script src="../js/script.js"></script>
+    <!--icon-->
+    <link rel="shortcut icon" type="image/x-icon" href="../img/web-icon.png">
+</head>
+
+<body>
+    <header>
+        <figure class="logo">
+            <a href="../index.html"><img src="../img/logo-puntoticket.png" alt="Logo puntoticket"></a>
+        </figure>
+        <nav>
+            <div class="search">
+                <input type="text" placeholder="Buscar" id="search-box">
+            </div>
+            <ul class="nav-menu">
+                <li>
+                    <a href="#" class="fa fa-search" id="search-btn"></a>
+                </li>
+                <li>
+                    <a href="#" class="fa fa-navicon" id="burguer-btn"></a>
+                </li>
+            </ul>
+            <ul class="burguer-menu">
+                <li><a href="#">Sitio</a></li>
+                <li><a href="../index.html" class="menu-selected">Dashboard</a></li>
+                <li><a href="#">Preferencias</a></li>
+                <!--categories menu-->
+                <hr class="menu-divider">
+                <li><a href="#">Administrador</a></li>
+                <li><a href="#">Cerrar sesión</a></li>
+                <hr class="menu-divider">
+                <li><a href="#" id="cerrar-btn">Cerrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--aside navbar-->
+    <div class="container">
+        <aside>
+            <div class="side-menu">
+                <!--sitio-->
+                <h3 class="side-title">Sitio</h3>
+                <ul class="site-list">
+                    <a href="#" id="eventos-btn">
+                        <li class="aside-option" id="eventos-option">
+                            <span class="left-icon fa fa-ticket"></span>
+                            <p class="aside-nav-par">Evento</p>
+                            <span id="eventos-icon" class="right-icon fa fa-angle-right"></span>
+                        </li>
+                    </a>
+                    <!--eventos-menu-->
+                    <ul class="eventos-menu">
+                        <a href="../eventos/eventos-nuevo.html">
+                            <li>
+                                <span class="left-icon fa fa-plus-circle"></span>
+                                <p class="menu-par">Añadir evento</p>
+                            </li>
+                        </a>
+                        <a href="../eventos/eventos-lista.html">
+                            <li>
+                                <span class="left-icon fa fa-list-alt"></span>
+                                <p class="menu-par">Listado eventos</p>
+                            </li>
+                        </a>
+                    </ul>
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-star-o"></span>
+                            <p class="aside-nav-par">Categoría</p>
+                            <span class="right-icon fa fa-angle-right"></span>
+                        </li>
+                    </a>
+                    <a href="#" id="paginas-btn">
+                        <li class="aside-option page-selected" id="paginas-option">
+                            <span class="left-icon fa fa-file-o"></span>
+                            <p class="aside-nav-par">Página</p>
+                            <span id="paginas-icon" class="right-icon fa fa-angle-right"></span>
+                        </li>
+                    </a>
+                    <!--paginas-menu-->
+                    <ul class="paginas-menu">
+                        <a href="../paginas/paginas-nuevo.html">
+                            <li>
+                                <span class="left-icon fa fa-plus-circle"></span>
+                                <p class="menu-par">Añadir página</p>
+                            </li>
+                        </a>
+                        <a href="../paginas/paginas-lista.html">
+                            <li>
+                                <span class="left-icon fa fa-list-alt"></span>
+                                <p class="menu-par">Listado páginas</p>
+                            </li>
+                        </a>
+                    </ul>
+                    <!---->
+                    <hr class="menu-divider">
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-wrench"></span>
+                            <p class="aside-nav-par">Tema</p>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-magic"></span>
+                            <p class="aside-nav-par">Menús</p>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-code"></span>
+                            <p class="aside-nav-par">Estilos</p>
+                        </li>
+                    </a>
+                </ul>
+                <!--administrar-->
+                <h3 class="side-title">Administrar</h3>
+                <ul class="admin-list">
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-user"></span>
+                            <p class="aside-nav-par">Usuarios</p>
+                            <span class="right-icon fa fa-angle-right"></span>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-feed"></span>
+                            <p class="aside-nav-par">Redes sociales</p>
+                            <span class="right-icon fa fa-angle-right"></span>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-bar-chart"></span>
+                            <p class="aside-nav-par">Estadísticas</p>
+                        </li>
+                    </a>
+                </ul>
+                <!--configurar-->
+                <h3 class="side-title">Configuración</h3>
+                <ul class="config-list">
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-gear"></span>
+                            <p class="aside-nav-par">Preferencias</p>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-question-circle"></span>
+                            <p class="aside-nav-par">Ayuda</p>
+                        </li>
+                    </a>
+
+                </ul>
+            </div>
+        </aside>
+
+        <!--section-->
+        <section class="main lista eventos">
+            <div class="lista-container">
+                <h2 class="lista-title">Listado de Páginas</h2>
+                <!--filtro-->
+
+                <div class="filtro-lista">
+                    <!--filtro-fecha-->
+                    <div class="filtro-btn filtro-sel">
+                        <span class="filtro-icon fa fa-calendar-o"></span>
+                        <p class="filtro-title">Ordenar por fecha</p>
+                    </div>
+                    <!--filtro-AZ-->
+                    <div class="filtro-btn">
+                        <span class="filtro-icon fa fa-sort-alpha-asc"></span>
+                        <p class="filtro-title">Orden alfabético</p>
+                    </div>
+                    <!--filtro-categorias-->
+                    <div class="filtro-btn">
+                        <span class="filtro-icon fa fa-user"></span>
+                        <p class="filtro-title">Ordenar por usuario</p>
+                    </div>
+                </div>
+                <!--pagina1-->
+                <div class="listado">
+                    <!--info-evento-->
+                    <div class="listado-info">
+                        <h3 class="info-title">Home</h3>
+                        <p class="info-name">
+                            <span class="listado-icon fa fa-link"></span> puntoticket.cl/<strong>home</strong>.html
+                        </p>
+                    </div>
+                    <!--info-admin-->
+                    <div class="listado-admin">
+                        <p class="admin-fecha">
+                            <span class="listado-icon fa fa-calendar-o"></span> 21-04-2016
+                        </p>
+                        <p class="admin-hora">
+                            <span class="listado-icon fa fa-clock-o"></span> 18:30
+                        </p>
+                        <p class="admin-categoria">
+                            <span class="listado-icon fa fa-user"></span> Administrador
+                        </p>
+                    </div>
+                    <div class="listado-btns">
+                        <!--destacar-->
+                        <button class="publicado-btn">
+                            <span class="listado-icon fa fa-upload"></span>
+                            <span class="publicado-txt">Publicar</span>
+                        </button>
+                        <!--editar-->
+                        
+                        <button class="admin-btn">
+                            <span class="listado-icon fa fa-edit"></span> Editar
+                        </button>
+                        <!--eliminar-->
+                        <button class="admin-btn eliminar">
+                            <span class="listado-icon fa fa-trash-o"></span> Eliminar
+                        </button>
+                    </div>
+                </div>
+                
+                <!--pagina 2-->
+                <div class="listado">
+                    <!--info-evento-->
+                    <div class="listado-info">
+                        <h3 class="info-title">Acerca de</h3>
+                        <p class="info-name">
+                            <span class="listado-icon fa fa-link"></span> puntoticket.cl/<strong>acercade</strong>.html
+                        </p>
+                    </div>
+                    <!--info-admin-->
+                    <div class="listado-admin">
+                        <p class="admin-fecha">
+                            <span class="listado-icon fa fa-calendar-o"></span> 22-04-2016
+                        </p>
+                        <p class="admin-hora">
+                            <span class="listado-icon fa fa-clock-o"></span> 19:30
+                        </p>
+                        <p class="admin-categoria">
+                            <span class="listado-icon fa fa-user"></span> Administrador
+                        </p>
+                    </div>
+                    <div class="listado-btns">
+                        <!--destacar-->
+                        <button class="publicado-btn">
+                            <span class="listado-icon fa fa-upload"></span>
+                            <span class="publicado-txt">Publicar</span>
+                        </button>
+                        <!--editar-->
+                        
+                        <button class="admin-btn">
+                            <span class="listado-icon fa fa-edit"></span> Editar
+                        </button>
+                        <!--eliminar-->
+                        <button class="admin-btn eliminar">
+                            <span class="listado-icon fa fa-trash-o"></span> Eliminar
+                        </button>
+                    </div>
+                </div>
+                
+                <!--pagina3-->
+                <div class="listado">
+                    <!--info-evento-->
+                    <div class="listado-info">
+                        <h3 class="info-title">Contacto</h3>
+                        <p class="info-name">
+                            <span class="listado-icon fa fa-link"></span> puntoticket.cl/<strong>contacto</strong>.html
+                        </p>
+                    </div>
+                    <!--info-admin-->
+                    <div class="listado-admin">
+                        <p class="admin-fecha">
+                            <span class="listado-icon fa fa-calendar-o"></span> 21-04-2016
+                        </p>
+                        <p class="admin-hora">
+                            <span class="listado-icon fa fa-clock-o"></span> 10:30
+                        </p>
+                        <p class="admin-categoria">
+                            <span class="listado-icon fa fa-user"></span> Administrador
+                        </p>
+                    </div>
+                    <div class="listado-btns">
+                        <!--destacar-->
+                        <button class="publicado-btn">
+                            <span class="listado-icon fa fa-upload"></span>
+                            <span class="publicado-txt">Publicar</span>
+                        </button>
+                        <!--editar-->
+                        
+                        <button class="admin-btn">
+                            <span class="listado-icon fa fa-edit"></span> Editar
+                        </button>
+                        <!--eliminar-->
+                        <button class="admin-btn eliminar">
+                            <span class="listado-icon fa fa-trash-o"></span> Eliminar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="ver-mas-lista">
+                    <button class="ver-mas-btn">Ver más</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="eliminar-modal">
+        <h2 class="modal-title">Confirmar Eliminar</h2>
+        <span id="modal-icon" class="fa fa-close modal-close"></span>
+        <p>¿Seguro/a que desea eliminar la página <span id="evento-eliminar"></span></p>
+        <ul class="modal-btns">
+            <li class="modal-si"><span class="fa fa-trash-o"></span>Eliminar</li>
+            <li class="modal-no modal-close"><span class="fa fa-close"></span>Cancelar</li>
+        </ul>
+    </div>
+
+
+    <footer>
+        <p>&copy;Copyright 2016 | <a href="#"><span class="fa fa-envira"></span>Cielosordo</a></p>
+    </footer>
+</body>
+
+</html>

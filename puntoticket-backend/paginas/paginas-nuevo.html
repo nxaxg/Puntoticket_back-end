@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Puntoticket | Nueva Página</title>
+    <!--site stylesheet-->
+    <link rel="stylesheet" href="../css/style.css">
+    <!--fonts-->
+    <link rel="stylesheet" href="../fonts/OpenSans/stylesheet.css">
+    <!--Font awesome-->
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <!--JQuery-->
+    <script src="../js/jquery-1.11.3.js"></script>
+    <script src="../js/script.js"></script>
+    <!--icon-->
+    <link rel="shortcut icon" type="image/x-icon" href="../img/web-icon.png">
+</head>
+
+<body>
+    <header>
+        <figure class="logo">
+            <a href="../index.html"><img src="../img/logo-puntoticket.png" alt="Logo puntoticket"></a>
+        </figure>
+        <nav>
+            <div class="search">
+                <input type="text" placeholder="Buscar" id="search-box">
+            </div>
+            <ul class="nav-menu">
+                <li>
+                    <a href="#" class="fa fa-search" id="search-btn"></a>
+                </li>
+                <li>
+                    <a href="#" class="fa fa-navicon" id="burguer-btn"></a>
+                </li>
+            </ul>
+            <ul class="burguer-menu">
+                <li><a href="#">Sitio</a></li>
+                <li><a href="#" class="menu-selected">Dashboard</a></li>
+                <li><a href="#">Preferencias</a></li>
+                <!--categories menu-->
+                <hr class="menu-divider">
+                <li><a href="#">Administrador</a></li>
+                <li><a href="#">Cerrar sesión</a></li>
+                <hr class="menu-divider">
+                <li><a href="#" id="cerrar-btn">Cerrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--aside navbar-->
+    <div class="container">
+        <aside>
+            <div class="side-menu">
+                <!--sitio-->
+                <h3 class="side-title">Sitio</h3>
+                <ul class="site-list">
+                    <a href="#" id="eventos-btn">
+                        <li class="aside-option" id="eventos-option">
+                            <span class="left-icon fa fa-ticket"></span>
+                            <p class="aside-nav-par">Evento</p>
+                            <span id="eventos-icon" class="right-icon fa fa-angle-right"></span>
+                        </li>
+                    </a>
+                    <!--eventos-menu-->
+                    <ul class="eventos-menu">
+                        <a href="../eventos/eventos-nuevo.html">
+                            <li>
+                                <span class="left-icon fa fa-plus-circle"></span>
+                                <p class="menu-par">Añadir evento</p>
+                            </li>
+                        </a>
+                        <a href="../eventos/eventos-lista.html">
+                            <li>
+                                <span class="left-icon fa fa-list-alt"></span>
+                                <p class="menu-par">Listado eventos</p>
+                            </li>
+                        </a>
+                    </ul>
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-star-o"></span>
+                            <p class="aside-nav-par">Categoría</p>
+                            <span class="right-icon fa fa-angle-right"></span>
+                        </li>
+                    </a>
+                    <a href="#" id="paginas-btn">
+                        <li class="aside-option page-selected" id="paginas-option">
+                            <span class="left-icon fa fa-file-o"></span>
+                            <p class="aside-nav-par">Página</p>
+                            <span id="paginas-icon" class="right-icon fa fa-angle-right"></span>
+                        </li>
+                    </a>
+                    <!--paginas-menu-->
+                    <ul class="paginas-menu">
+                        <a href="../paginas/paginas-nuevo.html">
+                            <li>
+                                <span class="left-icon fa fa-plus-circle"></span>
+                                <p class="menu-par">Añadir página</p>
+                            </li>
+                        </a>
+                        <a href="../paginas/paginas-lista.html">
+                            <li>
+                                <span class="left-icon fa fa-list-alt"></span>
+                                <p class="menu-par">Listado páginas</p>
+                            </li>
+                        </a>
+                    </ul>
+                    <!---->
+                    <hr class="menu-divider">
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-wrench"></span>
+                            <p class="aside-nav-par">Tema</p>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-magic"></span>
+                            <p class="aside-nav-par">Menús</p>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-code"></span>
+                            <p class="aside-nav-par">Estilos</p>
+                        </li>
+                    </a>
+                </ul>
+                <!--administrar-->
+                <h3 class="side-title">Administrar</h3>
+                <ul class="admin-list">
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-user"></span>
+                            <p class="aside-nav-par">Usuarios</p>
+                            <span class="right-icon fa fa-angle-right"></span>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-feed"></span>
+                            <p class="aside-nav-par">Redes sociales</p>
+                            <span class="right-icon fa fa-angle-right"></span>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-bar-chart"></span>
+                            <p class="aside-nav-par">Estadísticas</p>
+                        </li>
+                    </a>
+                </ul>
+                <!--configurar-->
+                <h3 class="side-title">Configuración</h3>
+                <ul class="config-list">
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-gear"></span>
+                            <p class="aside-nav-par">Preferencias</p>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="aside-option">
+                            <span class="left-icon fa fa-question-circle"></span>
+                            <p class="aside-nav-par">Ayuda</p>
+                        </li>
+                    </a>
+
+                </ul>
+            </div>
+        </aside>
+
+        <section class="main nueva-pagina">
+            <div class="edit-container">
+                <h2 class="lista-title">Nueva Página</h2>
+                <div class="form-nuevo">
+                    <div class="input-container">
+                        <input type="text" name="titulo-evento" class="input-100" placeholder="Título de la página" id="edit-title">
+                    </div>
+                    <div class="input-full pagina-input input-container">
+                        <span class="input-icon fa fa-link"></span>
+                        <p>puntoticket.com/</p>
+                        <input type="text" placeholder="Nombre de la página">
+                    </div>
+                    <div class="input-100">
+                        <ul class="pagina-edit-btns">
+                            <li id="pagina-edit-img" class="pagina-edit-sel"><span class="fa fa-image"></span></li>
+                            <li id="pagina-edit-tipotexto" class="pagina-edit-sel">
+                                <select name="tipo-text">
+                                    <option value="#">Párrafo</option>
+                                    <option value="#">Header 1</option>
+                                    <option value="#">Header 2</option>
+                                    <option value="#">Header 3</option>
+                                    <option value="#">Párrafo pequeño</option>
+                                </select>
+                            </li>
+                            <li id="pagina-edit-bold" class="pagina-edit-sel">
+                                <span class="fa fa-bold"></span>
+                            </li>
+                            <li id="pagina-edit-cursive" class="pagina-edit-sel">
+                                <span class="fa fa-italic"></span>
+                            </li>
+                            <li id="pagina-edit-ul" class="pagina-edit-sel">
+                                <span class="fa fa-list-ul"></span>
+                            </li>
+                            <li id="pagina-edit-ol" class="pagina-edit-sel">
+                                <span class="fa fa-list-ol"></span>
+                            </li>
+                            <li id="pagina-edit-link" class="pagina-edit-sel">
+                                <span class="fa fa-link"></span>
+                            </li>
+                            <li id="pagina-edit-align" class="pagina-edit-sel">
+                                <select name="align-text">
+                                    <option value="#">Align left</option>
+                                    <option value="#">Align right</option>
+                                    <option value="#">Align center</option>
+                                    <option value="#">Align justify</option>
+                                </select>
+                            </li>
+                            <li id="pagina-edit-html" class="pagina-edit-sel">
+                                <span class="fa fa-code"> </span>HTML
+                            </li>
+                        </ul>
+                        <textarea name="pagina-edit-text" id="pagina-edit-text"></textarea>
+                    </div>
+                    <div class="input-full">
+                        <div class="admin-btns">
+                            <button class="vista-previa">
+                                <span class="fa fa-tv"></span>
+                                Vista previa
+                            </button>
+                            <button class="descartar">
+                                <span class="fa fa-eraser"></span>
+                                Descartar
+                            </button>
+                            <a href="paginas-lista.html">
+                                <button class="publicar">
+                                    <span class="fa fa-check"></span>
+                                    Publicar
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy;Copyright 2016 | <a href="#"><span class="fa fa-envira"></span>Cielosordo</a></p>
+    </footer>
+</body>
+
+</html>

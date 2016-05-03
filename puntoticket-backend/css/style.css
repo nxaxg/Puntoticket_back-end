@@ -432,6 +432,17 @@ aside .eventos-menu li, aside .paginas-menu li{
     padding: 0 0 0.5% 0;
     text-transform: uppercase;
     font-family: 'open_sansextrabold';
+    font-size: 1.5em;
+}
+
+.listado .listado-info .info-name{
+    font-size: 1.2em;
+    color: dimgray;
+}
+
+.listado .listado-info .info-name strong{
+    font-family: 'open_sansbold';
+    color: black;
 }
 
 .listado .listado-btns{
@@ -461,7 +472,8 @@ aside .eventos-menu li, aside .paginas-menu li{
     color: dimgray;
 }
 
-.listado .listado-btns .ok-destacado{
+.listado .listado-btns .ok-destacado,
+.listado .listado-btns .ok-publicado{
     background-color: #ff8b38;
     color: white;
     border-color: #ff8b38;
@@ -548,6 +560,7 @@ input:focus{
 
 .form-nuevo .input-100{
     width: 100%;
+    overflow: hidden;
 }
 
 .form-nuevo label{
@@ -567,6 +580,7 @@ input:focus{
     overflow: hidden;
 }
 
+
 .input-full .input-icon{
     width: 4%;
     float: left;
@@ -577,6 +591,80 @@ input:focus{
     width: 96%;
     float: left;
 }
+
+/*pagina*/
+.pagina-input{
+    font-size: 1.2em;
+    margin-top: 2.5%;
+}
+
+.pagina-input p{
+    padding: 0.65% 0 0.65% 0.65%;
+    text-transform: uppercase;
+    font-family: 'open_sansbold';
+    width: 23%;
+    float: left;
+}
+
+.pagina-input input{
+    width: 73%;
+    float: left;
+}
+
+.pagina-edit-btns{
+    overflow: hidden;
+    width: 100%;
+    font-size: 1.1em;
+    margin-top: 1%;
+    color: black;
+}
+.pagina-edit-btns li{
+    padding: 1%;
+    height: 40px;
+    float: left;
+    border: 1px solid #454545;
+    font-family: 'open_sansregular';
+    cursor: pointer;
+}
+
+.pagina-edit-btns li:hover,
+.pagina-edit-btns select:hover{
+    background-color: #c3c3c3;
+    color: #343434;
+}
+
+.pagina-edit-btns select{
+    border: 0;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0);
+    color: black;
+}
+
+.pagina-edit-btns select:focus{
+    outline: none;
+}
+    
+#pagina-edit-text{
+    width: 100%;
+    min-height: 250px;
+    padding: 1%;
+    font-size: 1em;
+    font-family: 'open_sansregular';
+    background-color: rgba(0,0,0,0);
+    border: 1px solid black;
+}
+
+#pagina-edit-text:focus{
+    outline: 0;
+}
+
+.pagina-edit-selected,.pagina-edit-btns .pagina-edit-selected select{
+    background-color: dimgray;
+    color: white;
+}
+
+/**/
 
 .input-50:nth-child(odd){
     margin-right: 0;
@@ -740,6 +828,10 @@ input:focus{
     background-color: rgba(0,0,0,0);
 }
 
+#evento-eliminar{
+    font-family: 'open_sansbold';
+}
+
 /***footer***/
 footer{
     width: 100%;
@@ -751,4 +843,13 @@ footer{
     color: white;
     text-align: center;
     font-family: 'open_sanslight';
+}
+
+footer a{
+    color: white;
+    transition: 0.9s;
+}
+
+footer a:hover{
+    color: black;
 }
